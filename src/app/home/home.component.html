@@ -5,11 +5,12 @@
 
         <button (click)="getAnime()">Enter</button>
     </div>
+    <mat-spinner id="spinner" color="accent"></mat-spinner>
     <div class="anime">
         <div *ngIf="(infoAnime && imgAnime)" class="img-anime">
             <img src="{{imgAnime}}" alt="">
         </div>
-        <mat-spinner id="spinner" color="accent"></mat-spinner>
+
         <div *ngIf="(infoAnime && imgAnime)" class="info-anime">
             <p style="text-align: center;">{{infoAnime.title_japanese}}</p>
             <hr>
