@@ -27,13 +27,19 @@
         font-size: 20px;
         font-family: 'Silkscreen', cursive;
         color: #050127;
+        outline: none;
         text-align: center;
         border: 2px solid #cccc;
         border-radius: 10px;
     }
     
+    .search input:focus {
+        box-shadow: 0px 0px 30px #BB8FCE;
+    }
+    
     .search button {
         display: block;
+        cursor: pointer;
         width: 40%;
         padding: 8px;
         font-size: 20px;
@@ -44,6 +50,20 @@
         color: white;
         border: none;
         border-radius: 25px;
+        transition: all 400ms;
+    }
+    
+    .search button:hover {
+        transform: scale(1.2);
+        box-shadow: 0px 0px 20px #BB8FCE;
+    }
+    
+    .search .mensaje-vacio {
+        display: none;
+        margin-top: 15px;
+        text-align: center;
+        color: red;
+        font-size: 20px;
     }
     
     #spinner {
@@ -73,6 +93,19 @@
     
     .anime .info-anime {
         width: 65%;
+    }
+    
+    .anime-error {
+        margin-top: 50px;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        text-align: center;
+        color: #480873;
+    }
+    
+    .anime-error h1 {
+        font-family: 'Silkscreen', cursive;
     }
     
     @media(max-width:780px) {
