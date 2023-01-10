@@ -11,6 +11,7 @@ export class AnimeService {
 
   constructor(private http: HttpClient) { }
 
+  //obtener anime desde la api segun busqueda
   getAnime(anime:string):Observable<any>{
     return this.http.get(`${this.apiURL}=${anime}`)
   }

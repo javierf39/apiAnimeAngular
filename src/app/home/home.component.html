@@ -1,4 +1,5 @@
 <div class="container">
+    <!-- BUSCADOR -->
     <div class="search">
         <h1>Enter a anime</h1>
         <input type="text" [(ngModel)]="nameAnime">
@@ -6,12 +7,14 @@
         <button (click)="getAnime()">Enter</button>
         <p class="mensaje-vacio">Ingrese un anime</p>
     </div>
+    <!-- SPINNER -->
     <mat-spinner id="spinner" color="accent"></mat-spinner>
     <div class="anime" *ngIf="(infoAnime && imgAnime)">
         <div class=" img-anime ">
             <img src="{{imgAnime}} " alt=" ">
         </div>
 
+        <!-- INFORMACION DEL ANIME -->
         <div class="info-anime ">
             <p style="text-align: center; ">{{infoAnime.title_japanese}}</p>
             <hr>
@@ -26,6 +29,7 @@
         </div>
     </div>
 
+    <!-- MENSAJE DE ERROR -->
     <ng-template [ngIf]="!encontrado">
         <div class="anime-error">
             <h1>Anime no encontrado</h1>
